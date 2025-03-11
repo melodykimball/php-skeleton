@@ -1,0 +1,43 @@
+{
+  "name": "melodykimball/php-skeleton",
+  "description": "",
+  "type": "project",
+  "keywords": [],
+  "homepage": "https://github.com/melodykimball/php-skeleton",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Melody Kimball",
+      "role": "lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/melodykimball/php-skeleton/issues",
+    "wiki": "https://github.com/melodykimball/php-skeleton/wiki",
+    "source": "https://github.com/melodykimball/php-skeleton"
+  },
+  "require": {
+    "php": ">=8.1",
+    "phpstan/phpstan": "^2.0",
+    "phpstan/phpstan-strict-rules": "^2.0",
+    "phpstan/extension-installer": "^1.4",
+    "squizlabs/php_codesniffer": "^3.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "apcu-autoloader": true
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+  }
+}
